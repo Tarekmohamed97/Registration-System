@@ -1,0 +1,18 @@
+*{
+    color: black;
+    text-decoration: none;
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 92, 139);
+    color: white;
+    padding: 1rem;
+}
+
+.Logo__title{
+    color: white;
+    text-decoration: none;
+    margin: 0;
+}

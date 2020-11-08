@@ -1,0 +1,19 @@
+.buttons__section{
+    margin-top: .5rem;
+}
+
+.registerButton__section{
+    background-color: rgb(13, 41, 83);
+    color: white;
+    border-radius: 5px;
+    padding: .5rem;
+    border: none;
+    width: 90px;
+    margin: 0px 5px;
+}
+
+.registerButton__section:hover{
+    background-color: rgb(26, 60, 110);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
