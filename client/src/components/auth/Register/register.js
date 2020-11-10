@@ -29,7 +29,6 @@ function Register() {
 
 
         try{
-            const newUser = state;
             await Axios.post("http://localhost:5000/users/register", {
                 email: state.email,
                 displayname: state.displayname,
@@ -56,24 +55,24 @@ function Register() {
             <div className = "form__Container">
                 <h1>Sign Up</h1>
                 <form onSubmit = {submitForm} className = "inputs__container">
-                    <div className = "inputt">
-                        <label>username:</label>
+                    <div className = "inputForm__section">
+                        <label>Username:</label>
                         <input id = "displayname" type = "text" onChange = {(e) => handleChange(e)} />
                     </div>
-                    <div className = "inputt">
-                        <label>email:</label>
+                    <div className = "inputForm__section">
+                        <label>Email:</label>
                         <input id = "email" type = "email" onChange = {(e) => handleChange(e)} />
                     </div>
-                    <div className = "inputt">
+                    <div className = "inputForm__section">
                         <label>Password:</label>
                         <input id = "password" type = "password" onChange = {(e) => handleChange(e)}/>
                     </div>
-                    <div className = "inputt">
-                        <label>confirm password:</label>
+                    <div className = "inputForm__section">
+                        <label>Confirm password:</label>
                         <input id = "checkpassword" type = "password" onChange = {(e) => handleChange(e)}/>
                     </div>
                     <div>
-                        <button type = "submit">Sign up</button>
+                        <button className = "submitButton__form" type = "submit">Sign up</button>
                     </div>
                 </form>
             </div>
