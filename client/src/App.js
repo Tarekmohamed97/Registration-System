@@ -4,8 +4,8 @@ import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/layout/header'
 import Home from './components/pages/home';
-import Login from './components/auth/login';
-import Register from './components/auth/register';
+import Login from './components/auth/Login/login';
+import Register from './components/auth/Register/register';
 import {UserContext} from './context/userContext'
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
         )
         setUserData({
           token,
-          user: userData.data
+          user: userRes.data
         })
       }
       console.log(tokenRes.data)

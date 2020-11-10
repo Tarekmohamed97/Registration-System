@@ -10,20 +10,20 @@ router.post("/register", async (req, res) => {
         let {email, password, passwordCheck, displayname} = req.body;
         //validate
         if(!email || !password || !passwordCheck){
-            return res.status(404).json({msg: 'not all field have been filled'});
+            return res.status(400).json({msg: 'not all field have been filled'});
         }
 
         if(password.length < 5)
-            return res.status(404).json({msg: "password must be more than 5 character"});
+            return res.status(400).json({msg: "password must be more than 5 character"});
 
         if(password !== passwordCheck){
-            res.status(404)
+            res.status(400)
                 .json({msg: "password and passwordCheck must be the same"})
         }
 
         const existingUser = await User.findOne({email: email})
         if(existingUser){
-            res.status(404).json({msg: "email already exists"})
+            res.status(400).json({msg: "email already exists"})
         }
 
         if(!displayname)
@@ -52,15 +52,15 @@ router.post("/login", async (req, res) => {
 
         //validate
         if(!email || !password)
-            return res.status(404).json({msg: 'not all field have been filled'});
+            return res.status(400).json({msg: 'not all field have been filled'});
 
         const user = await User.findOne({email: email});
         if(!user)
-            return res.status(404).json({msg: 'no account with this email has been registred'});
+            return res.status(400).json({msg: 'no account with this email has been registred'});
 
         const isMatch = await bcrypt.compare(password, user.password);
         if(!isMatch)
-            return res.status(404).json({msg: "invalid login data"});
+            return res.status(400).json({msg: "invalid login data"});
 
         const token = jwt.sign({id: user._id}, process.env.JWT_PASSWORD);
 
@@ -69,7 +69,7 @@ router.post("/login", async (req, res) => {
             user : {
                 id: user._id,
                 displayname: user.displayname,
-                email: user.email
+                //email: user.email
             },
         });
     } catch (e) {
