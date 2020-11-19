@@ -22,13 +22,21 @@ function AuthSwitch() {
             token: undefined,
             user:undefined
         });
-        localStorage.setItem("auth-token", " ")
+        localStorage.setItem("auth-token", " ");
+        history.push('/');
     }
 
     return (
         <div className = "buttons__section">
             {
-                userData.user? <button onClick = {logout} className = "registerButton__section">Log out</button> :
+                userData.user? (
+                    <div className = "userData-Section__header">
+                        <p className = "userName__Section__header">{userData?.user.displayname}</p>
+                        <div>
+                            <button onClick = {logout} className = "registerButton__section">Log out</button>
+                        </div> 
+                    </div>     
+                ) :
                 <>
                 <button className = "registerButton__section" onClick = {register}>Register</button>
                 <button className = "registerButton__section" onClick = {login}>Log in</button>
