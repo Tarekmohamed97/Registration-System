@@ -6,7 +6,8 @@ import Header from './components/layout/header'
 import Home from './components/pages/home';
 import Login from './components/auth/Login/login';
 import Register from './components/auth/Register/register';
-import {UserContext} from './context/userContext'
+import Profile from './components/pages/profile/profile'
+import {UserContext} from './context/userContext';
 
 function App() {
 
@@ -52,6 +53,7 @@ function App() {
           <Route path = "/"  exact component = {Home} />
           <Route path = "/login" exact component = {Login} />
           <Route path = "/register" exact component = {Register} />
+          <Route path = "/profile" exact component = {Profile} />
         </Switch>
       </UserContext.Provider>
     </BrowserRouter>

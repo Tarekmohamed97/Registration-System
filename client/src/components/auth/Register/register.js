@@ -44,7 +44,7 @@ function Register() {
                 user: loginRes.data.user
             })
             localStorage.setItem('aut-token', loginRes.data.token);
-            history.push('/')
+            history.push('/profile')
         } catch (e) {
             console.log(e.message)
         }   
