@@ -18,13 +18,76 @@
     transition: .5s ease-in-out;
 }
 
-.userData-Section__header{
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
 
 .userName__Section__header{
     text-align: center;
     margin: .2rem 1rem 0 0 ;
+}
+
+.userData--photo__header__section{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
+}
+
+.userData--photo__header__section img{
+    width: 2%;
+    margin-right: 5px;
+    border-radius: 50%;
+    
+}
+
+.dropDown__arrow{
+    border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  cursor: pointer;
+}
+
+
+.userDropDownOptionContent__section {
+    display: none;
+    position: absolute;
+    right: 0%;
+    top: 100%;
+    background-color: rgb(24, 95, 153);
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 5px;
+    z-index: 1;
+    animation: content .6s ease-in-out;
+}
+
+.userData--photo__header__section:hover .userDropDownOptionContent__section{
+    display: block;
+} 
+
+
+.dropDown__option{
+    cursor: pointer;
+    outline: none;
+    color: white;
+    padding: .5rem;
+}
+
+.dropDown__option:hover{
+    background-color: rgb(42, 115, 175);
+    transition: .5s ease-in-out;
+}
+
+@keyframes content{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
 }

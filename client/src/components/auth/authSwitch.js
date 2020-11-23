@@ -1,7 +1,8 @@
 import React, {useContext} from 'react'
-import {useHistory} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import './authSwitch.css';
-import {UserContext} from '../../context/userContext'
+import {UserContext} from '../../context/userContext';
+import Unknown from '../../images/Unknown_person.jpg';
 
 function AuthSwitch() {
 
@@ -31,10 +32,18 @@ function AuthSwitch() {
             {
                 userData.user? (
                     <div className = "userData-Section__header">
-                        <p className = "userName__Section__header">{userData?.user.displayname}</p>
-                        <div>
-                            <button onClick = {logout} className = "registerButton__section">Log out</button>
-                        </div> 
+                        <div className = "userData--photo__header__section">
+                            <img src = {Unknown} alt = "unknown"/>
+                            <p className = "userName__Section__header">{userData?.user.displayname}</p>
+                            <div className="userDropDownOptionContent__section">
+                                <div  className = "dropDown__option">
+                                    <Link  to = "/profile" style = {{outline: "none", color: "white"}}>My Profile</Link>
+                                </div>
+                                <div  className = "dropDown__option">
+                                    <span>Log out</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>     
                 ) :
                 <>
