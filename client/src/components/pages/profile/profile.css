@@ -1,0 +1,53 @@
+.profileCard__container{
+    background-color: rgb(2, 2, 75);
+    width: 40%;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    border-radius: 10px;
+}
+
+.profileCard__Image__section{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: 2rem 0rem;
+}
+
+.profileCard__Image__section img{
+    width: 160px;
+    border-radius: 50%;
+}
+
+.userData__section{
+    color: rgb(77, 208, 248);
+    font-weight: bold;
+    font-size: 130%;
+    text-align: center;
+}
+
+.userButtons__Section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5rem 0rem;
+}
+
+.userButton{
+    padding: .5rem;
+    outline: none;
+    width: 120px;
+    border: 1px solid rgb(80, 214, 231);
+    background: transparent;
+    color: rgb(80, 214, 231);
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.userButton:hover{
+    cursor: pointer;
+    transition: .8s ease-in-out;
+    background-color: rgb(80, 214, 231);
+    color: black;
+}
+
