@@ -3,7 +3,7 @@ import Axios from 'axios'
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/layout/header'
-import Home from './components/pages/home';
+import Home from './components/pages/home/home';
 import Login from './components/auth/Login/login';
 import Register from './components/auth/Register/register';
 import Profile from './components/pages/profile/profile'
