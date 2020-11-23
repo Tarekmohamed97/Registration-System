@@ -8,9 +8,11 @@ function Header() {
 
     return (
         <div className = "header__container">
-            <Link to = "/">
-                <h1 className = "Logo__title">MERN</h1>
-            </Link>
+            <div>
+                <Link to = "/">
+                    <h1 className = "Logo__title">MERN</h1>
+                </Link>
+            </div>
             <AuthSwitch />
         </div>
     )
