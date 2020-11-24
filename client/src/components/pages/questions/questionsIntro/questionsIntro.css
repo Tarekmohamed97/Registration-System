@@ -1,0 +1,58 @@
+body{
+    /* background-color: rgb(3, 26, 53); */
+}
+
+.container{
+    position: absolute;
+    background-color: rgb(9, 41, 77);
+    width: 60%;
+    top: 20%;
+    left: 20%;
+    height: 50%;
+    border-radius: 10px;
+}
+
+.heading__Container{
+    text-align: center;
+    color: white;
+}
+
+.inputContainer{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputContainer input{
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+.error__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enrollButton__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enrolButton{
+    margin: .8rem 0rem;
+    padding: .5rem 1rem;
+    font-weight: bold;
+    background-color: rgb(48, 102, 172);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.enrolButton:hover{
+    background-color: rgb(35, 77, 133);
+    cursor: pointer;
+    transition: .7s ease-in-out;
+}

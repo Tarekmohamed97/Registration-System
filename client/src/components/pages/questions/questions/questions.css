@@ -1,0 +1,53 @@
+.questionSection__container{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: white;
+    background-color: rgb(23, 93, 150);
+    width: 60%;
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.questionBody__section{
+    text-align: left;
+}
+
+.singleOption__section{
+    margin: .5rem 0;
+}
+
+.quizButtons__section{
+    padding: .3rem 1.5rem;
+    font-weight: bold;
+    font-size: .9rem;
+    margin-top: .5rem;
+    color: rgb(136, 215, 252);
+    outline: none;
+    border: 1px solid rgb(138, 213, 248);
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.quizButtons__section:hover{
+    background-color: rgb(4, 4, 78);
+    cursor: pointer;
+    transition: .7s ease-in-out;
+}
+
+.userScore__section{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    color: white;
+    background-color: rgb(23, 93, 150);
+    width: 60%;
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: center;
+}
