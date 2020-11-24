@@ -6,8 +6,12 @@ import Header from './components/layout/header'
 import Home from './components/pages/home/home';
 import Login from './components/auth/Login/login';
 import Register from './components/auth/Register/register';
-import Profile from './components/pages/profile/profile'
+import Profile from './components/pages/profile/profile';
+import QuestionsIntro from './components/pages/questions/questionsIntro/questionsIntro';
+import Questions from './components/pages/questions/questions/questions'
 import {UserContext} from './context/userContext';
+import store from './redux/store'
+import { Provider } from 'react-redux';
 
 function App() {
 
@@ -49,12 +53,16 @@ function App() {
     <BrowserRouter>
       <UserContext.Provider value = {{userData, setUserData}}>
         <Header />
-        <Switch>
-          <Route path = "/"  exact component = {Home} />
-          <Route path = "/login" exact component = {Login} />
-          <Route path = "/register" exact component = {Register} />
-          <Route path = "/profile" exact component = {Profile} />
-        </Switch>
+        <Provider store = {store} >
+          <Switch>
+            <Route path = "/"  exact component = {Home} />
+            <Route path = "/login" exact component = {Login} />
+            <Route path = "/register" exact component = {Register} />
+            <Route path = "/profile" exact component = {Profile} />
+            <Route path = "/questions/introduction"  exact component = {QuestionsIntro} />
+            <Route path = "/questions/main" component = {Questions} />
+          </Switch>
+        </Provider>
       </UserContext.Provider>
     </BrowserRouter>
   );
